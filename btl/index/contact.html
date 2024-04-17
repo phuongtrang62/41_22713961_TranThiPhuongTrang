@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap -->
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./bootstrap/css/bootstrap.min.css"
+    />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- end font awesome -->
+
+    <!-- start css -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/contact.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/contact-responsive.css" />
+    <!--  css modal -->
+    <style>
+      /* CSS cho modal */
+      .modal {
+        display: none; /* Ẩn modal mặc định */
+        position: fixed; /* Cố định vị trí */
+        z-index: 1; /* Đảm bảo modal hiển thị phía trên các phần khác */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto; /* Cuộn khi nội dung quá lớn */
+        background-color: rgba(0, 0, 0, 0.4); /* Màu nền với độ mờ */
+      }
+
+      /* Nội dung của modal */
+      .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto; /* Canh giữa modal */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+      }
+
+      /* Đóng modal */
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    </style>
+    <!-- end css -->
+    <title>contact</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header">
+        <div class="logoheader">
+          <a href="index.html"><img src="../index/img/loll.png" alt="" /></a>
+        </div>
+      </div>
+      <div class="main-bar" id="navbarToggleExternalContent">
+        <ul>
+          <li>
+            <a href="index.html"><i class="fa-solid fa-house"></i></a>
+          </li>
+          <li><a href="product.html">Sản phẩm </a></li>
+          <li><a href="sitemap.html">Site map</a></li>
+          <li><a href="about.html">Về chúng tôi</a></li>
+          <li><a href="contact.html"> Liên hệ </a></li>
+          <li><a href="login.html">Đăng nhập</a></li>
+          <li><a href="register.html">Đăng ký</a></li>
+          <li>
+            <a href="profile.html"><i class="fa-solid fa-user"></i></a>
+          </li>
+          <li>
+            <a href="member.html"><i class="fa-solid fa-star"></i></a>
+          </li>
+          <form class="form-inline">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-dark">Search</button>
+          </form>
+        </ul>
+      </div>
+    </header>
+    <!-- End header -->
+    <!-- contact -->
+    <section class="contact">
+      <div class="container">
+        <h1 class="i-title"><span>LIÊN HỆ VỚI SHOP </span></h1>
+        <div class="row">
+          <div class="col-lg-6 col-md-12 info">
+            <div class="row">
+              <h2 class="col-lg-2 col-md-2 col-sm-2">Địa chỉ:</h2>
+              <p class="col-lg-5 col-md-9 col-sm-8">
+                41f/44/9 Đặng Thùy Trâm Phường 13 Bình Thạnh TPHCM
+              </p>
+            </div>
+            <div class="row">
+              <h2 class="col-lg-2 col-md-2 col-sm-2">Điện thoại:</h2>
+              <p class="col-lg-5 col-md-9 col-sm-8">
+                <span>Hotline:</span>
+                0823649101
+              </p>
+            </div>
+            <div class="row">
+              <h2 class="col-lg-2 col-md-2 col-sm-2">Email:</h2>
+              <p class="col-lg-5 col-md-9 col-sm-8">info@nmt.vn</p>
+            </div>
+            <div class="row">
+              <h2 class="col-lg-3 col-md-2 col-sm-3">Chat online :</h2>
+              <div class="icon-contact col-lg-5 col-md-9 col-sm-8">
+                <img src="/img/icon-fb.svg" alt="" />
+                <img src="/img/icon-zalo.svg" alt="" />
+                <img src="/img/icon-viber.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12 mess">
+            <div class="ct-form">
+              <p>Để lại lời nhắn cho chúng tôi:</p>
+              <input
+                type="text"
+                placeholder="username "
+                name=""
+                id="username" onblur="testuser()"
+              />
+              <span id="tbuser"></span>
+              <input
+                type="text"
+                placeholder="fPhoneNumber"
+                name=""
+                id="phone" onblur="testphone()"
+              />
+              <span id="tbphone"></span>
+              <input type="text" placeholder="Email" name="" id="email" onblur="testemail()"/>
+              <span id="tbemail"></span>
+              <textarea placeholder="Content" id="Content" onblur="testconten()"></textarea>
+              <span id="tbconten"></span>
+              <div class="text-right"><button id="btnSubmit">Gửi</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="successModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Gửi thành công!</p>
+      </div>
+    </div>
+
+    <!-- end contact  -->
+    <!-- footer -->
+    <footer class="py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h4>Thông tin liên hệ</h4>
+            <p>Địa chỉ: 123 Đường ABC, Quận XYZ, TP. Hồ Chí Minh</p>
+            <p>Điện thoại: 0123456789</p>
+            <p>Email: example@example.com</p>
+          </div>
+          <div class="col-md-4">
+            <h4>Đường dẫn nhanh</h4>
+            <ul class="list-unstyled">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./about.html">About</a></li>
+              <li><a href="./product.html">Product</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <img src="./img/pic.png" />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- index.js -->
+    <script src="./js/index.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./bootstrap/js/jquery.slim.min.js"></script>
+    <script src="./bootstrap/js/popper.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script>
+      // Lấy tham chiếu đến nút Gửi
+      let btnSubmit = document.getElementById("btnSubmit");
+
+      // Thêm sự kiện click cho nút Gửi
+      btnSubmit.addEventListener("click", function (event) {
+        // Ngăn chặn hành vi mặc định của nút Gửi (tránh gửi biểu mẫu)
+        if(!testconten() || !testemail() ||!testphone()||!testuser()){
+          alert("Bạn chưa nhập dữ liệu")
+        }
+        else{
+        event.preventDefault();
+
+        // Hiển thị modal đã gửi thành công
+        showModal();}
+      });
+    
+      // Hàm để hiển thị modal
+      function showModal() {
+        // Tìm modal trong DOM
+        let modal = document.getElementById("successModal");
+
+        // Hiển thị modal
+        modal.style.display = "block";
+
+        // Tự đóng modal sau 3 giây
+        setTimeout(function () {
+          modal.style.display = "none";
+        }, 3000);
+
+      }
+
+
+      function testuser(){
+        let name = document.getElementById("username").value;
+        
+        let rex=/^[a-zA-Z0-9]{6,}$/;
+        if(rex.test(name)){
+          document.getElementById('tbuser').innerHTML ="";
+          return true;
+        }
+        else if(name==""){
+          document.getElementById('tbuser').innerHTML ="Vui lòng nhập username";
+          return false;
+        }
+        else{
+          document.getElementById('tbuser').innerHTML ="Username phải từ 6 kí tự!!!";
+          return false;
+        }
+
+      };
+    
+      function testphone(){
+        let name = document.getElementById("phone").value;
+        
+        let rex=/^(0)[0-9]{9}$/;
+        if(rex.test(name)){
+          document.getElementById('tbphone').innerHTML ="";
+          
+          return true;
+        }
+        else if(name==""){
+          document.getElementById('tbphone').innerHTML ="Vui lòng nhập Phone number";
+          return false;
+        }
+        else{
+          document.getElementById('tbphone').innerHTML ="PhoneNumber bắt đầu bằng 0 và 9 số tiếp theo";
+          return false;
+        }
+
+      };
+      function testemail(){
+        let email = document.getElementById("email").value;
+        
+        let rex=/^[a-zA-Z0-9]+(@)[a-zA-Z0-9]+(.com)$/;
+        if(rex.test(email)){
+          document.getElementById('tbemail').innerHTML ="";
+          return true;
+        }
+        else if(email==""){
+          document.getElementById('tbemail').innerHTML ="Vui lòng nhập email";
+          return false;
+        }
+        else{
+          document.getElementById('tbemail').innerHTML ="Nhập sai email ";
+          return false;
+        }
+
+      };
+      function testconten(){
+        let name = document.getElementById("username").value;
+        
+        let rex=/^[a-zA-Z0-9]+$/;
+        if(rex.test(name)){
+          document.getElementById('tbconten').innerHTML ="";
+         
+          return true;
+        }
+        else if(name==""){
+          document.getElementById('tbconten').innerHTML ="Vui lòng nhập content";
+          return false;
+        }
+        else{
+          document.getElementById('tbconten').innerHTML ="Content phải từ 1 kí tự!!!";
+          return false;
+        }
+
+      };
+    </script>
+  </body>
+</html>

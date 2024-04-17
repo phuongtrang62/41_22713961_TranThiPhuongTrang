@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap -->
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./bootstrap/css/bootstrap.min.css"
+    />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- end font awesome -->
+
+    <!-- start css -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/about.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/contact-responsive.css" />
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Righteous);
+
+      *,
+      *:before,
+      *:after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        position: relative;
+      }
+
+      html,
+      body {
+        height: 10px;
+      }
+      body {
+        text-align: center;
+      }
+      body:before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 0;
+        height: 100%;
+      }
+
+      h3 {
+        display: inline-block;
+        color: black;
+        font-family: "Righteous", serif;
+        font-size: 90px;
+        text-shadow: 0.03em 0.03em 0 rgb(190, 29, 29);
+      }
+      h3:after {
+        content: attr(data-shadow);
+        position: absolute;
+        top: 0.06em;
+        left: 0.06em;
+        z-index: -1;
+        text-shadow: none;
+        background-image: linear-gradient(
+          45deg,
+          transparent 45%,
+          hsla(48, 20%, 90%, 1) 45%,
+          hsla(48, 20%, 90%, 1) 55%,
+          transparent 0
+        );
+        background-size: 0.05em 0.05em;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        animation: shad-anim 15s linear infinite;
+      }
+
+      @keyframes shad-anim {
+        0% {
+          background-position: 0 0;
+        }
+        0% {
+          background-position: 100% -100%;
+        }
+      }
+    </style>
+    <!-- end css -->
+    <title>about</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header">
+        <div class="logoheader">
+          <a href="index.html"><img src="../index/img/loll.png" alt="" /></a>
+        </div>
+      </div>
+      <div class="main-bar" id="navbarToggleExternalContent">
+        <ul>
+          <li>
+            <a href="/index.html"><i class="fa-solid fa-house"></i></a>
+          </li>
+          <li><a href="product.html">Sản phẩm </a></li>
+          <li><a href="sitemap.html">Site map</a></li>
+          <li><a href="about.html">Về chúng tôi</a></li>
+          <li><a href="contact.html"> Liên hệ </a></li>
+          <li><a href="login.html">Đăng nhập</a></li>
+          <li><a href="register.html">Đăng ký</a></li>
+          <li>
+            <a href="profile.html"><i class="fa-solid fa-user"></i></a>
+          </li>
+          <li>
+            <a href="member.html"><i class="fa-solid fa-star"></i></a>
+          </li>
+          <form class="form-inline">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-dark">Search</button>
+          </form>
+        </ul>
+      </div>
+    </header>
+    <!-- End header -->
+    <!-- Page Content -->
+    <div
+      class="page-heading about-heading header-text"
+      style="background-image: url(./img/home-2.png)"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="text-content">
+              <h4>about us</h4>
+
+              <h2>our company</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="best-features about-features">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h3 data-shadow="dang!">Our Background</h3>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="right-image">
+              <img src="/index/img/item1-1.jpg" alt="" />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="left-content">
+              <h4>Chúng tôi là ai ? - làm gì ?</h4>
+              <p>
+                Chào mừng đến với công ty bán linh kiện chất lượng hàng đầu!
+                Chúng tôi tự hào là địa chỉ tin cậy cung cấp các loại linh kiện
+                đa dạng và chất lượng cao, phục vụ cho nhu cầu sửa chữa và nâng
+                cấp của cả cá nhân và doanh nghiệp. Với sự đa dạng trong sản
+                phẩm và cam kết về chất lượng, chúng tôi mong muốn đồng hành
+                cùng bạn trong việc tạo nên những sản phẩm hoàn hảo và đáp ứng
+                mọi yêu cầu của bạn.
+              </p>
+              <ul class="social-icons">
+                <li>
+                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa-brands fa-google"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="service-item">
+              <div class="icon">
+                <i class="fa fa-gear"></i>
+              </div>
+              <div class="down-content">
+                <h4>Sự kiện sắp ra mắt</h4>
+
+                <a href="#" class="filled-button">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-item">
+              <div class="icon">
+                <i class="fa fa-gear"></i>
+              </div>
+              <div class="down-content">
+                <h4>linh kiện sắp ra mắt</h4>
+
+                <a href="#" class="filled-button">Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-item">
+              <div class="icon">
+                <i class="fa fa-gear"></i>
+              </div>
+              <div class="down-content">
+                <h4>Khuyến mãi sắp ra mắt</h4>
+
+                <a href="#" class="filled-button">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <!-- Footer -->
+    <footer class="py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h4>Thông tin liên hệ</h4>
+            <p>Địa chỉ: 123 Đường ABC, Quận XYZ, TP. Hồ Chí Minh</p>
+            <p>Điện thoại: 0123456789</p>
+            <p>Email: example@example.com</p>
+          </div>
+          <div class="col-md-4">
+            <h4>Đường dẫn nhanh</h4>
+            <ul class="list-unstyled">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="product.html">Product</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <img src="./img/pic.png" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- index.js -->
+    <script src="./js/index.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./bootstrap/js/jquery.slim.min.js"></script>
+    <script src="./bootstrap/js/popper.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>

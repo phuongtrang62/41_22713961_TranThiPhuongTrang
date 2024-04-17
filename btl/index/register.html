@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Đăng ký</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./bootstrap/css/bootstrap.min.css"
+    />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- end font awesome -->
+
+    <!-- start css -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <style>
+      *,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+body {
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+/* style login */
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f5f5f5;
+}
+.login__container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.login__container h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-align: center;
+}
+.login__container form {
+  display: flex;
+  flex-direction: column;
+}
+.login__container form label {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+.login__container form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.login__container form button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #333;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.login__container form button:hover {
+  background: #555;
+}
+.login__container form a {
+  text-align: center;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #333;
+}
+.login__container form a:hover {
+  color: #555;
+}
+.login__registerButton {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: block;
+}
+/* style signup */
+.signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f5f5f5;
+}
+.signup__container {
+  width: 100%;
+  max-width: 400px;
+  padding: 100px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.signup__container h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-align: center;
+}
+.signup__container form {
+  display: flex;
+  flex-direction: column;
+}
+.signup__container form label {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+.signup__container form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.signup__container form button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #333;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.signup__container form button:hover {
+  background: #555;
+}
+.signup__container form a {
+  text-align: center;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #333;
+}
+.signup__container form a:hover {
+  color: #555;
+}
+.signup__registerButton {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: block;
+  
+}
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="logoheader">
+          <a href="index.html"><img src="../index/img/loll.png" alt="" /></a>
+        </div>
+      </div>
+      <div class="main-bar" id="navbarToggleExternalContent">
+        <ul>
+          <li>
+            <a href="index.html"><i class="fa-solid fa-house"></i></a>
+          </li>
+          <li><a href="product.html">Sản phẩm </a></li>
+          <li><a href="sitemap.html">Site map</a></li>
+          <li><a href="about.html">Về chúng tôi</a></li>
+          <li><a href="contact.html"> Liên hệ </a></li>
+          <li><a href="login.html">Đăng nhập</a></li>
+          <li><a href="register.html">Đăng ký</a></li>
+          <li>
+            <a href="profile.html"><i class="fa-solid fa-user"></i></a>
+          </li>
+          <li>
+            <a href="member.html"><i class="fa-solid fa-star"></i></a>
+          </li>
+          <form class="form-inline">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-dark">Search</button>
+          </form>
+        </ul>
+      </div>
+    </header>
+    
+      <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <h1>Đăng Ký</h1>
+            <form>
+              <div class="mb-3">
+                <label for="username" class="form-label">User Name</label>
+                <input type="email" class="form-control" id="username" onblur="testuser()">
+                <span id="tbuser" ></span>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" onblur="testemail()">
+                <span id="tbemail"></span>
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" onblur="testpass()">
+                <span id="tbpass"></span>
+              </div>
+              <div class="mb-3">
+                <label for="repassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="repassword" onblur="testrepass()">
+                <span id="tbrepass"></span>
+              </div>
+              
+              <button type="submit" class="btn btn-secondary btn-signup">Submit</button>
+            </form>
+      </div>
+      
+    </div>
+
+    <script>
+
+      let username = document.getElementById("username");
+      let email = document.getElementById("email");
+      let password = document.getElementById("password");
+      let btnSignup = document.querySelector(".btn-signup");
+      let btnLogin = document.querySelector(".btn-login");
+      function testuser(){
+        let name = document.getElementById("username").value;
+        
+        let rex=/^[a-zA-Z0-9]{6,}$/;
+        if(rex.test(name)){
+          document.getElementById('tbuser').innerHTML ="";
+          localStorage.setItem('name', name);
+          return true;
+        }
+        else if(name==""){
+          document.getElementById('tbuser').innerHTML ="Vui lòng nhập username";
+          return false;
+        }
+        else{
+          document.getElementById('tbuser').innerHTML ="Username phải từ 6 kí tự!!!";
+          return false;
+        }
+
+      };
+      function testpass(){
+        let pass = document.getElementById("password").value;
+        
+        let rex=/^[a-zA-Z0-9]{6,}$/;
+        if(rex.test(pass)){
+          document.getElementById('tbpass').innerHTML ="";
+          localStorage.setItem('pass',pass);
+          return true;
+        }
+        else if(pass==""){
+          document.getElementById('tbpass').innerHTML ="Vui lòng nhập password";
+          return false;
+        }
+        else{
+          document.getElementById('tbpass').innerHTML ="Password phải từ 6 kí tự!!!";
+          return false;
+        }
+
+      };
+      function testrepass(){
+        let repass = document.getElementById("repassword").value;
+        
+        let pass = document.getElementById("password").value;
+        if(pass==repass){
+          document.getElementById('tbrepass').innerHTML ="";
+          return true;
+        }
+        else if(repass==""){
+          document.getElementById('tbpass').innerHTML ="Vui lòng nhập password";
+          return false;
+        }
+        else{
+          document.getElementById('tbpass').innerHTML ="Nhập sai!!!";
+          return false;
+        }
+
+      };
+      function testemail(){
+        let email = document.getElementById("email").value;
+        
+        let rex=/^[a-zA-Z0-9]+(@)[a-zA-Z0-9]+(.com)$/;
+        if(rex.test(email)){
+          document.getElementById('tbemail').innerHTML ="";
+          return true;
+        }
+        else if(email==""){
+          document.getElementById('tbemail').innerHTML ="Vui lòng nhập email";
+          return false;
+        }
+        else{
+          document.getElementById('tbemail').innerHTML ="Nhập sai email ";
+          return false;
+        }
+
+      };
+      
+      btnSignup.addEventListener("click", (e) => {
+        e.preventDefault();
+        let user = {
+          username: username.value,
+          
+          password: password.value,
+        };
+        let json = JSON.stringify(user);
+        if (!testemail() || !testuser() || !testrepass()|| !testpass()) {
+          alert("Vui lòng nhập đủ thông tin");
+        } else {
+          localStorage.setItem(username.value, json);
+          alert("Dăng kí thành công!!!");
+          window.location.href='login.html';
+        }
+      });
+  
+    </script>
+  </body>
+</html>

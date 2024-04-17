@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng nhập</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./bootstrap/css/bootstrap.min.css"
+    />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- end font awesome -->
+
+    <!-- start css -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/contact.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/contact-responsive.css" />
+   <script src="../index/js/jquery-3.7.1.min.js"></script>
+
+    <style>
+      *,
+      *:before,
+      *:after {
+        box-sizing: border-box;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        font: inherit;
+      }
+      img,
+      picture,
+      svg,
+      video {
+        display: block;
+        max-width: 100%;
+      }
+      body {
+        min-height: 100vh;
+        font-family: "Roboto", sans-serif;
+      }
+      /* style login */
+      .login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #f5f5f5;
+      }
+      .login__container {
+        width: 100%;
+        max-width: 400px;
+        padding: 100px;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .login__container h1 {
+        margin-bottom: 20px;
+        font-size: 2rem;
+        text-align: center;
+      }
+      .login__container form {
+        display: flex;
+        flex-direction: column;
+      }
+      .login__container form label {
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+      }
+      .login__container form input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+      .login__container form button {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background: #333;
+        color: #fff;
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
+      .login__container form button:hover {
+        background: #555;
+      }
+      .login__container form a {
+        text-align: center;
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: #333;
+      }
+      .login__container form a:hover {
+        color: #555;
+      }
+      .login__registerButton {
+        margin-top: 20px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        color: black;
+        font-size: 1.2rem;
+        cursor: pointer;
+        display: block;
+      }
+      /* style signup */
+      .signup {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #f5f5f5;
+      }
+      .signup__container {
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .signup__container h1 {
+        margin-bottom: 20px;
+        font-size: 2rem;
+        text-align: center;
+      }
+      .signup__container form {
+        display: flex;
+        flex-direction: column;
+      }
+      .signup__container form label {
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+      }
+      .signup__container form input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+      .signup__container form button {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background: #333;
+        color: #fff;
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
+      .signup__container form button:hover {
+        background: #555;
+      }
+      .signup__container form a {
+        text-align: center;
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: #333;
+      }
+      .signup__container form a:hover {
+        color: #555;
+      }
+      .signup__registerButton {
+        margin-top: 20px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        color: black;
+        font-size: 1.2rem;
+        cursor: pointer;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="logoheader">
+          <a href="index.html"><img src="../index/img/loll.png" alt="" /></a>
+        </div>
+      </div>
+      <div class="main-bar" id="navbarToggleExternalContent">
+        <ul>
+          <li>
+            <a href="index.html"><i class="fa-solid fa-house"></i></a>
+          </li>
+          <li><a href="product.html">Sản phẩm </a></li>
+          <li><a href="sitemap.html">Site map</a></li>
+          <li><a href="about.html">Về chúng tôi</a></li>
+          <li><a href="contact.html"> Liên hệ </a></li>
+          <li><a href="login.html">Đăng nhập</a></li>
+          <li><a href="register.html">Đăng ký</a></li>
+          <li>
+            <a href="profile.html"><i class="fa-solid fa-user"></i></a>
+          </li>
+          <li>
+            <a href="member.html"><i class="fa-solid fa-star"></i></a>
+          </li>
+          <form class="form-inline">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-dark">Search</button>
+          </form>
+        </ul>
+      </div>
+    </header>
+    <div class="login">
+      <div class="login__container">
+        <h1>Đăng Nhập</h1>
+        <form>
+          <div class="input__field">
+            <input id="username" type="text" placeholder="User Name" />
+          </div>
+
+        
+          <div class="input__field">
+            <input id="password" type="password" placeholder="Password" />
+          </div>
+
+          <button class="btn btn-login" onclick="kt()" id="tb">Login</button>
+        </form>
+        <a href="register.html" class="login__registerButton"
+          >Tạo tài khoản mới</a
+        >
+      </div>
+    </div>
+    <script>
+     $(document).ready(function() {
+  $('#tb').click(function(e) {
+    e.preventDefault();
+    let tdn=localStorage.getItem('name');
+    let mk=localStorage.getItem('pass');
+    if($('#username').val() ==""||$('#password').val() ==""){
+      alert('Bạn chưa nhập username hoặc password');
+     }
+     else if($('#username').val() ==tdn && $('#password').val() ==mk){
+      alert('Đăng nhập thành công!!!');
+      window.location.href = 'product.html'; 
+     }
+    
+    else{
+    alert('Nhập sai username hoặc password');
+    
+    }
+  });
+});
+
+
+    </script>
+  </body>
+</html>
